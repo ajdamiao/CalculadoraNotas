@@ -26,9 +26,22 @@ class MainActivity : AppCompatActivity() {
             var nota4 = binding.txtNota4.text.toString().toFloat();
 
 
+            /*
+            if(nota1.equals(null) || nota2.equals(null) || nota3.equals(null) || nota4.equals(null))
+            {
+                mensagem.setText("Ha nota(s) faltando");
+            }
+
+            if(nota1 == null || nota2 == null || nota3 == null || nota4 == null)
+            {
+                mensagem.setText("Ha nota(s) faltando");
+            }
+            */
+
+
             if (faltas > 20) {
                 mensagem.setTextColor(Color.parseColor("#ff0000"))
-                mensagem.setText("Repovado por falta!");
+                mensagem.setText("Reprovado por falta!");
             }
             else {
                 var notaFinal:Float = (nota1+nota2+nota3+nota4)/4
@@ -41,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 else
                 {
                     mensagem.setTextColor(Color.parseColor("#ff0000"))
-                    mensagem.setText("Repovado! nota final: $notaFinal");
+                    mensagem.setText("Reprovado! nota final: $notaFinal");
                 }
             }
         }
